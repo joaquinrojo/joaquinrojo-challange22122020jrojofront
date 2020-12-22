@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Card, CardBody, CardHeader, Col, Row, Table ,Button,Collapse} from "reactstrap";
-//import Paginador from "../../util/Paginador";
-import Pagination from "react-js-pagination";
-import  CausalertaUtil  from "../../util/CausalertaUtil";
+import  Util  from "../../util/Util";
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
@@ -24,7 +22,7 @@ class RutificadorPersonas extends Component {
 
 
 consulta=(tipoConsulta)=>{
-  let util=new CausalertaUtil();
+  let util=new Util();
     var arrayBody =
     {
       "rut":this.state.rutBusqueda,
