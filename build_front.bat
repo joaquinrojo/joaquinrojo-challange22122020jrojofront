@@ -4,7 +4,11 @@ REM Here is where you type remark – which will NOT interfere with program / fi
 
 
 Start "" 
-cd "C:\Users\joaquin\AppData\Roaming\npm\causalerta_front"
+
+
+
+
+cd "E:\npm\joaquinrojo-challange22122020jrojofront"
 npm run build
 
 

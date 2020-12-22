@@ -1,10 +1,10 @@
 {
-  "name": "@causalertav2/hipercubo",
+  "name": "@desafio/hipercubo",
   "version": "2.1.2",
-  "description": "Causalerta",
+  "description": "desafio",
   "author": "Joaquin Rojo",
-  "homepage": "https://causalerta/sistemalegacy",
-  "copyright": "Copyright 2019 Hipercubo SpA",
+  "homepage": "https://causalerta/desafio",
+  "copyright": "Copyright 2019",
   "license": "MIT",
   "private": true,
   "dependencies": {

@@ -93,7 +93,7 @@ consulta=(tipoConsulta)=>{
       <Row>
         <Col xs="12">
           <FormGroup>
-            <Label htmlFor="name">RUT sin dígito verificador (sin puntos ni guiones)</Label>
+            <Label htmlFor="name">RUT </Label>
             <Input value={this.state.rutBusqueda} onChange={ e => {this.setState({ rutBusqueda : e.target.value });} } type="text" id="rut" placeholder="rut"  />
           </FormGroup>
         </Col>
