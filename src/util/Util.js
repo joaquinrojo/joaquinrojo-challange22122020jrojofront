@@ -1,7 +1,5 @@
-import  SecurityUtilities  from './SecurityUtilities';
-import  { Redirect } from 'react-router-dom';
+
 import Swal from 'sweetalert2'
-var store = require('store');
 
 
 class Util {
@@ -13,40 +11,20 @@ class Util {
 		  { nombre: 'findById', verbo: 'GET', url: "/externos/persona/{rut}",sinAuth:true },
 		];
   }
-
   buscaApiPorNombre = (stringNombre) =>{	
     for(let a=0;a<this.apis.length;a++){
       if(this.apis[a].nombre===stringNombre)
         return this.apis[a];
     }
   }  
-
     callApi=function(idEndpoint,headers,body,urlParamsObj){
         //Busco el endpoint
-
         if(headers==null){
           headers={};
         }
         let objApi=this.buscaApiPorNombre(idEndpoint);
-
         let headersFinal={};        
-        if(!objApi.sinAuth){ //Para endpoints públicos
-     
-        let stringAuth=this.getCredenciales();
-
-                  
-          //OJO
-          headersFinal={	
-            'Authorization': stringAuth,			
-          };
-
-          Object.assign(headersFinal,headers);
-        }else{
-
-          Object.assign(headersFinal,headers);          
-        }
-
-
+        Object.assign(headersFinal,headers);          
         let urlBase=objApi.url;
         let verbo=objApi.verbo;
         //Reemplazo con la ruta
@@ -75,7 +53,6 @@ class Util {
           urlParams = urlParams.trim("&");
           url=this.rootApi+urlBase;
         }
-
           return fetch(url,
           {
               method: objApi.verbo,
@@ -96,7 +73,6 @@ class Util {
             return (responseJson);
           })
           .catch((error) =>{
-
           });	
 
     }
